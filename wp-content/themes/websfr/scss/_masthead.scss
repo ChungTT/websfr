@@ -1,0 +1,28 @@
+// Styling for the masthead
+header.masthead {
+  // TIP: Background images are set within the HTML using inline CSS!
+  background: no-repeat center center;
+  background-size: cover;
+  position: relative;
+  min-height: 700px;
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #535252;
+    opacity: 0.37;
+  }
+  .site-heading {
+    h1 {
+      font-size: 60px;
+    }
+    .text-green {
+      color: #56a809;
+    }
+    .text-black {
+      color: $black;
+    }
+  }
+}
