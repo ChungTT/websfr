@@ -1,4 +1,6 @@
+<?php /* Template Name: App mobile */ ?>
 <?php get_header(); ?>
+
 <?php if( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 <!-- Main Content -->
 <div class="container">
@@ -21,6 +23,7 @@
         <div class="col-6 content-<?php echo get_field('postion_content') ?>">
           <div class="wrap">
             <h3><?php the_field('title_app_mobile'); ?></h3>
+            <h2><?php the_field('title_about_us'); ?></h2>
             <div class="cont">
                <?php the_content(); ?>
             </div>

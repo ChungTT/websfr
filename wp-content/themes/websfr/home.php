@@ -1,18 +1,20 @@
+<?php /* Template Name: Home Page */ ?>
 <?php  get_header(); ?>
 <!-- Main Content -->
+
 <div class="container">
   <div class="wrap">
-    <section id="about-us" class=" item-homepage">
-        <div class="about-me item-homepage">
-            <h2>about us</h2>
+    <section id="about-us" class="item-homepage">
+        <div class="about-me">
+            <h2><?php the_field('title_about_us'); ?></h2>
             <div class="inner">
-                <p>SFR Software ensures the highest level of productivity with the Company’s disciplined delivery methodology,effective tool suite,and the staff’s positive attitude to work.Our Global Delivery Methodology ensures that all delivery centers meet multinational organizations’ needs with consistency and quality across multiple languages and time-zones.</p>
+                <p><?php the_field('description_about_us'); ?></p>
             </div>
         </div>
     </section>
-    <section id="services" class=" item-homepage">
+    <section id="services" class="item-homepage">
         <div class="services">
-            <h2>services</h2>
+            <h2><?php the_field('title_services'); ?></h2>
             <div class="inner">
                 <div class="row">
                     <div class="col-3">
@@ -47,9 +49,9 @@
             </div>
         </div>
     </section>
-    <section id="projects" class=" item-homepage">
-        <div class="projects item-homepage">
-            <h2>Projects</h2>
+    <section id="projects" class="item-homepage">
+        <div class="projects">
+            <h2><?php the_field('title_projects'); ?></h2>
             <div class="inner">
                 <div class="row">
                     <div class="col-6">
@@ -96,43 +98,65 @@
             </div>
         </div>
     </section>
-    <section id="responsive-customer" class=" item-homepage">
-        <div class="responsive-customer item-homepage">
-            <h2>responsive customer</h2>
+    <section id="responsive-customer" class="item-homepage">
+        <div class="responsive-customer">
+            <h2><?php the_field('title_responsive_customer'); ?></h2>
             <div class="inner">
+                <?php
+                    $infor = get_field('infor_customer');  
+                    if( $infor ): ?>
                 <div class="avata">
-                    <img src="<?php echo get_template_directory_uri();?>/img/user.png" alt="">
+                    <?php 
+                        $image =  $infor['avata'];
+                        if( !empty($image) ): ?>
+                          <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" class="img-fluid" />
+                    <?php endif; ?>
                 </div>
                 <div class="profile">
-                    <h6 class="title-profile">David Carta CEO Telaeris</h6>
-                    <p>SFR Software was great with this project. I was a complete flake and unresponsive for days at a time and they kept me on task and focused me back in on the project. They had a clear understanding of the goals of the project and mad them reality. — davidcarta </p>
+                    <h6 class="title-profile">
+                        <span class="name">
+                            <strong><?php echo $infor['name']; ?></strong>
+                        </span>
+                        <span class="position">
+                            <?php echo $infor['position']; ?>
+                        </span>
+                    </h6>
+                    <p> <?php echo $infor['description']; ?></p>
                 </div>
-                <div class="clear-fix"></div>
+                <?php endif; ?>
             </div>
         </div>
     </section>
-    <section id="our-clients" class=" item-homepage">
-        <div class="our-clients item-homepage">
-            <h2>OUR CLIENTS</h2>
+    <section id="our-clients" class="item-homepage">
+        <div class="our-clients">
+            <h2><?php the_field('title_our_clients'); ?></h2>
             <div class="inner">
                 <img src="<?php echo get_template_directory_uri();?>/img/logocontract.png " alt="">
             </div>
         </div>
     </section>
-    <section id="contact" class=" item-homepage">
-        <div class="contact item-homepage">
-            <h2>Contact</h2>
+    <section id="contact" class="item-homepage">
+        <div class="contact">
+            <h2><?php the_field('title_contact'); ?></h2>
             <div class="inner">
                <div class="row">
                  <div class="col-6">
-                    SFR Softwere company
-                    109th Hoang Sy Khai – Son Tra – Danang Vietnam
-                    +84 988 858 049
-                    sale@sfr-creative.com
-                    sfr-creative.com
+                    <div class="contact-cont">
+                        <?php
+                            $contact = get_field('contact');  
+                            if( $contact ): ?>
+                                <span><?php echo $contact['company_name'] ?></span><br>
+                                <span><?php echo $contact['address'] ?></span><br>
+                                <span><a href="tel:<?php echo $contact['phone_number'] ?>"><?php echo $contact['phone_number'] ?></a></span><br>
+                                <span><a href="mailto:<?php echo $contact['email'] ?>"><?php echo $contact['email'] ?></a></span><br>
+                                <span><a href="mailto:<?php echo $contact['mail'] ?>"><?php echo $contact['mail'] ?></a></span>
+                        <?php endif; ?>
+                    </div>
                  </div>
                  <div class="col-6">
-                   
+                   <div class="map">
+                       <?php the_field('map'); ?>
+                   </div>
                  </div>
                </div>
             </div>
