@@ -1,41 +1,75 @@
 .item-homepage {
     padding: 40px 0;
     .inner {
-    		margin-top: 50px;
+        margin-top: 50px;
     }
-    &.about-me {
-    	.inner {
-    		margin-top: 0;
-    	}
+    .about-me {
+        .inner {
+            margin-top: 0;
+        }
     }
-    &.services {
+    .services {
 
         .link-item-service {
             display: block;
         }
     }
-    &.projects {
-    	.item-project {
-    		margin: 15px 0;
-    	}
-    	.link-item-project {
-			display: block;
-			position: relative;
-    	}
-    	.bg-opacity {
-    		background-color: rgba(83,82,82,0.6);
-    		position: absolute;
-    		bottom:0;
-    		left:0;
-    		right: 0;
-    		font-size: 48px;
-    		color:$white;
-    		padding: 10px 5px;
-    		text-align: center;
-    		text-transform: uppercase;
-    	}
+    .projects {
+        .item-project {
+            margin: 15px 0;
+        }
+        .link-item-project {
+            display: block;
+            position: relative;
+        }
+        .bg-opacity {
+            background-color: rgba(83, 82, 82, 0.6);
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            font-size: 48px;
+            color: $white;
+            padding: 10px 5px;
+            text-align: center;
+            text-transform: uppercase;
+        }
     }
-    &.responsive-customer {
-    	
+    .responsive-customer {
+        .inner {
+            display: flex;
+        }
+        .avata {
+            margin-top: 15px;
+            img {
+                width: 121px;
+                border-radius: 100%;
+                height: 121px;
+            }
+        }
+        .title-profile {
+            font-size: 30px;
+            color: $blue;
+            text-transform: capitalize;
+            font-weight: 400;
+        }
+        .profile {
+            width: calc(100% - 121px);
+            padding-left: 45px;
+            font-size: 28px;
+        }
+    }
+    .contact {
+        .contact-cont, a {
+            font-size: 24px;
+            color: $blue;
+        }
+        .map {
+            max-width: 600px;
+            width: 100%;
+            iframe {
+                width: 100%;
+            }
+        }
     }
 }

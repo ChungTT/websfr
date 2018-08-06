@@ -1,3 +1,4 @@
+
 <?php 
 	if( !function_exists("chunbi_theme_setup") ) {
 		function chunbi_theme_setup(){
