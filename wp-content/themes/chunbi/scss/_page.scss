@@ -1,0 +1,38 @@
+#page {
+	.item {
+		padding: 50px 0 40px;
+		border-bottom: 1px solid #9a9a9a;
+		margin: 0px -15px;
+		.image {
+			margin: 0 auto;
+			text-align: center;
+		}
+	}
+	.cont {
+		text-align: justify;
+	}
+	.common-cont {
+		padding: 0px 15px;
+	}
+	.img-small {
+		width: 33.33%;
+	}
+	.img-medium {
+		width: 50%;
+	}
+	.img-large {
+		width: 66.667%;
+	}
+}
+
+@media only screen and (max-width:767px){
+	#page {
+		.item {
+			padding: 30px 0px 20px;
+		}
+		.cont-top {
+			float: none;
+			margin: 20px auto;
+		}
+	}
+}
