@@ -1,0 +1,97 @@
+// Styling for the masthead
+header.masthead {
+  background: no-repeat center center;
+  background-size: cover;
+  position: relative;
+  top:70px;
+  margin-bottom: 86px;
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #535252;
+    opacity: 0.37;
+  }
+  .item-header {
+      height: 500px;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center top;
+    .cont-header {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .container {
+      height: 100%;
+      .inner {
+        height: 100%;
+      }
+    }
+    .images-heading {
+      position: absolute;
+      bottom: 20px;
+    }
+  }
+  .slick-dots {
+    bottom: 15px !important;
+  }
+  .site-heading {
+    h1 {
+      font-size: 60px;
+      font-weight: 400;
+      font-family: 'MyriadHebrew-Regular';
+    }
+    .text-green {
+      color: #56a809;
+    }
+    .text-black {
+      color: $black;
+    }
+  }
+}
+
+@media only screen and (max-width: 1199px) {
+  header.masthead {
+    .site-heading {
+      h1 {
+        font-size: 48px;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 991px){
+  header.masthead {
+    top:70px;
+    margin-bottom: 70px;
+    .item-header {
+      height: 350px;
+    }
+    .site-heading h1 {
+      font-size: 30px;
+    }
+  }
+}
+
+@media only screen and (max-width: 575px) {
+  header.masthead {
+    .item-header {
+      height: 260px;
+      .cont-header {
+        max-width: 100%;
+        flex: 0 0 100%;
+      }
+      .cont-img {
+        display: none;
+      }
+    }
+    .site-heading {
+      h1 {
+        text-align: center;
+      }
+    }
+  }
+}

@@ -1,0 +1,91 @@
+/* Theme name: chunbi
+ * Description: theme for beginer
+ * Theme URI: https://www.facebook.com/SFR-software-134769173382771/
+ * Version: 1.0
+ * Author: Chunbi
+ * Author URI: https://www.facebook.com/jkungduok
+ * License: Chunbi
+ * License URI: https://www.facebook.com/jkungduok
+ * Tags: Two-columns
+ * Text Domain: chunbi
+ * Languages Folder: /languages
+ */
+
+/* Global Style */
+
+
+html {
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+}
+body {
+	font-family: Arial,"Helvetica", sans-serif;
+	-webkit-font-smoothing: antialiased;
+}
+img {
+	max-width: 100%;
+	height: auto;
+}
+.customize-support #mainNav{
+	top: 30px;
+}
+
+p {
+  line-height: 1.5;
+  margin: 30px 0;
+  a {
+    text-decoration: underline;
+  }
+}
+.show-mobile {
+	display: none;
+}
+
+@media only screen and (max-width: 1199px) {
+	p {
+		margin: 20px 0;
+	}
+	h3 {
+		font-size:30px;
+	}
+	h2 {
+		font-size: 35px;
+	}
+}
+
+@media only screen and (max-width: 991px) {
+	.customize-support #mainNav{
+		top: 44px;
+	} 
+}
+@media only screen and (max-width: 767px) {
+	body {
+		font-size: 14px;
+	}
+	p {
+		margin: 15px 0;
+	}
+	h3 {
+		font-size:25px;
+	}
+	h2 {
+		font-size: 30px;
+	}
+	.show-mobile {
+		display: block;
+		text-align: center;
+		padding-bottom: 15px;
+	} 
+	.show-desktop {
+		display: none;
+	} 
+}
+@media only screen and (max-width: 480px) {
+	h3 {
+		font-size:20px;
+	}
+	h2 {
+		font-size: 25px;
+	}
+}

@@ -1,0 +1,381 @@
+.item-homepage {
+    padding: 40px 0;
+    .inner {
+        margin-top: 50px;
+    }
+    .about-me {
+        .inner {
+            margin-top: 0;
+            font-size: 30px;
+            text-align: justify;
+        }
+    }
+    .services {
+        .link-item-service {
+            display: block;
+            color: $gray;
+            font-family: 'Impact';
+            &:hover,
+            &.active {
+                color: $blue;
+                text-decoration: none;
+                svg {
+                    .st0 {
+                        fill: #fff;
+                    }
+                    .st1,
+                    .st2,
+                    .st6,
+                    .st7,
+                    .st8 {
+                        fill: $blue;
+                    }
+                }
+                .img {
+                    background-color: #fff;
+                    border: 1px solid $blue;
+                }
+            }
+        }
+        .item-service {
+            text-align: center;
+            margin: 0 auto;
+            .name {
+                font-size: 30px;
+                text-transform: uppercase;
+                display: block;
+                margin-top: 30px;
+            }
+            .img {
+                width: 194px;
+                height: 194px;
+                border: 1px solid #a7a7a7;
+                border-radius: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background-color: #a7a7a7;
+                margin: 0 auto;
+            }
+            .web-app {
+                svg {
+                    width: 110px;
+                }
+            }
+            .mobile-app {
+                svg {
+                    width: 66px;
+                }
+            }
+            .soft-ware {
+                svg {
+                    width: 86px;
+                }
+            }
+            .graphic-design {
+                svg {
+                    width: 104px;
+                    margin-left: 25px;
+                }
+            }
+            svg {
+                .st0 {
+                    fill: #a7a7a7;
+                }
+                .st1,
+                .st2,
+                .st6,
+                .st7,
+                .st8 {
+                    fill: #fff;
+                }
+            }
+        }
+    }
+    .projects {
+        .item-project {
+            margin: 15px 0;
+        }
+        .link-item-project {
+            display: block;
+            position: relative;
+            overflow: hidden;
+            img {
+                transform: scale(1);
+                transition: all .4s;
+            }
+            &:hover {
+                img {
+                    transition: all .4s;
+                    transform: scale(1.1);
+                }
+            }
+        }
+        .bg-opacity {
+            font-family:'UTMCaviar';
+            background-color: rgba(83, 82, 82, 0.6);
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            font-size: 46px;
+            color: $white;
+            padding: 5px;
+            text-align: center;
+            text-transform: uppercase;
+        }
+
+    }
+    .responsive-customer {
+        .inner {
+            display: flex;
+        }
+        .avata {
+            margin-top: 15px;
+            img {
+                width: 121px;
+                border-radius: 100%;
+                height: 121px;
+            }
+        }
+        .title-profile {
+            font-size: 30px;
+            color: $blue;
+            text-transform: capitalize;
+            font-weight: 400;
+        }
+        .profile {
+            width: calc(100% - 121px);
+            padding-left: 45px;
+            font-size: 28px;
+        }
+        .description {
+            font-family: 'UTMCaviar';
+        }
+
+    }
+    .our-clients {
+        .item {
+            padding: 15px 30px;
+        }
+        .slick-dots {
+            bottom: -25px;
+        }
+    }
+    .contact {
+        .contact-cont,
+        a {
+            font-size: 24px;
+            color: $blue;
+            p {
+                position: relative;
+                margin: 5px 0;
+                padding-left: 35px;
+            }
+            .icon-contact {
+                position: absolute;
+                left: 0;
+            }
+            a {
+                text-decoration: none;
+            }
+        }
+        .map {
+            max-width: 600px;
+            width: 100%;
+            iframe {
+                width: 100%;
+                height: 260px;
+            }
+        }
+    }
+}
+@media only screen and (max-width:1199px) {
+    .item-homepage {
+        .about-me {
+            .inner {
+                font-size: 20px;
+            }
+        }
+        .services {
+            .link-item-service {
+                img {
+                    max-width: 140px;
+                }
+            }
+            .item-service {
+                .name {
+                    font-size: 25px;
+                }
+                .img {
+                    width: 150px;
+                    height: 150px;
+                }
+                .web-app {
+                    svg {
+                        width: 80px;
+                    }
+                }
+                .mobile-app {
+                    svg {
+                        width: 50px;
+                    }
+                }
+                .graphic-design {
+                    svg {
+                        width: 70px;
+                    }
+                }
+                .soft-ware {
+                    svg {
+                        width: 70px;
+                    }
+                }
+            }
+        }
+        .projects {
+            .bg-opacity {
+                font-size: 30px;
+            }
+        }
+        .responsive-customer {
+            .profile {
+                font-size: 20px;
+                padding-left: 20px;
+            }
+            .title-profile {
+                font-size: 25px;
+            }
+        }
+        .contact {
+            .contact-cont,
+            a {
+                font-size: 20px;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width:991px) {
+    .item-homepage {
+        .services {
+             .item-service {
+                .name {
+                    font-size: 20px;
+                }
+                .img {
+                    width: 120px;
+                    height: 120px;
+                }
+                .web-app {
+                    svg {
+                        width: 60px;
+                    }
+                }
+                .mobile-app {
+                    svg {
+                        width: 40px;
+                    }
+                }
+                .graphic-design {
+                    svg {
+                        width: 60px;
+                    }
+                }
+                .soft-ware {
+                    svg {
+                        width: 60px;
+                    }
+                }
+            }
+        }
+        .contact {
+            .row-contact {
+                flex-direction: column-reverse;
+            }
+            .contact-cont {
+                margin: 15px 0 30px;
+            }
+            .map {
+                width: 100%;
+                max-width: 100%;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width:767px) {
+    .item-homepage {
+        .about-me {
+            .inner {
+                font-size: 14px;
+            }
+        }
+        .services {
+            .item-service {
+                margin: 0px auto 30px;
+            }
+            .item-service {
+                span {
+                    font-size: 20px;
+                    margin-top: 15px;
+                }
+            }
+        }
+        .projects {
+            .bg-opacity {
+                font-size: 17px;
+            }
+        }
+        .responsive-customer {
+            .profile {
+                width: 100%;
+            }
+            .title-profile {
+                text-align: center;
+                font-size: 22px;
+            }
+            .avata {
+                margin: 0 auto 20px;
+            }
+            .inner {
+                flex-direction: column;
+            }
+        }
+        .contact {
+            .contact-cont,
+            a {
+                font-size: 16px;
+                p {
+                    padding-left: 25px;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width:575px) {
+    .item-homepage {
+        .projects {
+            .link-item-project {
+                max-width: 300px;
+                margin: 0 auto;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width:414px) {
+    .item-homepage {
+        padding: 30px 0 0;
+        .inner {
+            margin-top: 30px;
+        }
+        .services {
+            .common-item-service {
+                max-width: 100%;
+                flex: 0 0 100%;
+            }
+        }
+    }
+}
